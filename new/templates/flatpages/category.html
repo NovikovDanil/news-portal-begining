@@ -1,0 +1,13 @@
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+<!-- Название у нас будет Category -->
+{% block title %}
+Category
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим саму категорию, идентификатор котороой был передан в url -->
+{% block content %}
+<h3>Категория: {{ category.name}}
+</h3>
+{% endblock content %}
